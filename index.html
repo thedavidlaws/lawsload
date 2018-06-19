@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lazy Loading</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <style>
+
+        img {
+            width: 50%;
+
+        }
+
+
+    </style>
+
+    <script>
+            window.addEventListener('load', function(){
+            var allimages= document.getElementsByTagName('img');
+            for (var i=0; i<allimages.length; i++) {
+                if (allimages[i].getAttribute('data-src')) {
+                    allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
+                }
+            }
+        }, false)
+
+    </script>
+    </head>
+
+    <body>
+
+    <h1>Images</h1>
+    <p>These are loaded the "lazy" way!</p>
+
+
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+        <img src="images/giphy.gif" data-src="images/DSCN0105.jpg" alt="test image">
+
+
+    </body>
+</html>
